@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:parcel_smart/components/custom_button.dart';
+import 'package:parcel_smart/screens/auth_screens/sign_in_screen.dart';
 import 'package:parcel_smart/utils/colors.dart';
 
 class OnboardingScreenThree extends StatelessWidget {
@@ -37,7 +38,6 @@ class OnboardingScreenThree extends StatelessWidget {
                               fontSize: 36.sp,
                               color: Color(0xFF16171C)),
                         ),
-
                         Image.asset(
                           "assets/waving_hand.png",
                           width: 30.w,
@@ -59,13 +59,18 @@ class OnboardingScreenThree extends StatelessWidget {
                           fontSize: 14.sp,
                           color: const Color(0xFF16171C)),
                     ),
-                     SizedBox(
+                    SizedBox(
                       height: 25.h,
                     ),
                     CustomButton(
                         text: "Get Started",
                         color: AppColors.primaryColor,
-                        onTap: () {})
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const SignIn()));
+                        })
                   ],
                 ),
               ),

@@ -4,6 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:parcel_smart/components/custom_button.dart';
 import 'package:parcel_smart/utils/colors.dart';
 
+import '../auth_screens/sign_in_screen.dart';
+
 class OnboardingScreenFive extends StatelessWidget {
   const OnboardingScreenFive({super.key});
 
@@ -68,7 +70,12 @@ class OnboardingScreenFive extends StatelessWidget {
                     CustomButton(
                         text: "Get Started",
                         color: AppColors.primaryColor,
-                        onTap: () {})
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const SignIn()));
+                        })
                   ],
                 ),
               ),

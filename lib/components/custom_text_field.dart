@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:parcel_smart/utils/colors.dart';
 
 import '../utils/styles.dart';
 
@@ -117,7 +118,8 @@ class CustomField extends StatelessWidget {
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10.0),
             borderSide: const BorderSide(
-              color: Color(0xffC30A3B),
+              color: AppColors.primaryColor
+              ,
               width: 1.5,
             ),
           ),
@@ -149,7 +151,7 @@ class CustomField extends StatelessWidget {
             icon: Icon(
               icon,
               size: 18,
-              color: const Color(0xffC30A3B),
+              color: const Color(0xff111111),
             ),
           ),
         ),
